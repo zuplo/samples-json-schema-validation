@@ -1,0 +1,9 @@
+{
+  "description": "A simple POST to the hello-world example",
+  "pathname": "v1/people",
+  "method": "POST",
+  "headers": {
+    "content-type": "application/json"
+  },
+  "body": "{\n    \"firstName\" : \"Josh\",\n    \"lastName\" : \"Twist\",\n    \"favoriteColors\" : [\"red\", \"pink\", \"purple\"]\n}"
+}

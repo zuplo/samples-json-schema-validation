@@ -1,0 +1,44 @@
+{
+  "routes": [
+    {
+      "label": "What zup?",
+      "path": "people",
+      "handler": {
+        "export": "default",
+        "module": "$import(./modules/echo)"
+      },
+      "methods": [
+        "POST"
+      ],
+      "corsPolicy": "AnythingGoes",
+      "version": "v1",
+      "policies": {
+        "inbound": ["validate-person-policy"]
+      },
+      "key": "cc7901ce-4b0a-4a30-bb6f-e38ddbed1b09"
+    }
+  ],
+  "versions": [
+    {
+      "name": "none",
+      "pathPrefix": ""
+    },
+    {
+      "name": "v1",
+      "pathPrefix": "v1/"
+    }
+  ],
+  "policies": [
+    {
+      "name": "validate-person-policy",
+      "policyType": "validate-json-schema-inbound",
+      "handler": {
+        "export": "ValidateJsonSchemaInbound",
+        "module": "$import(@zuplo/runtime)",
+        "options": {
+          "validator": "$import(./schemas/person.json)"
+        }
+      }
+    }
+  ]
+}
