@@ -2,7 +2,7 @@
   "routes": [
     {
       "label": "What zup?",
-      "path": "people",
+      "path": "/people",
       "handler": {
         "export": "default",
         "module": "$import(./modules/echo)"
@@ -10,12 +10,11 @@
       "methods": [
         "POST"
       ],
-      "corsPolicy": "AnythingGoes",
+      "corsPolicy": "anything-goes",
       "version": "v1",
       "policies": {
         "inbound": ["validate-person-policy"]
-      },
-      "key": "cc7901ce-4b0a-4a30-bb6f-e38ddbed1b09"
+      }
     }
   ],
   "versions": [
@@ -25,7 +24,7 @@
     },
     {
       "name": "v1",
-      "pathPrefix": "v1/"
+      "pathPrefix": "/v1"
     }
   ],
   "policies": [
