@@ -1,5 +1,5 @@
 {
-  "description": "A simple POST to the hello-world example",
+  "description": "A simple POST to test body validation",
   "pathname": "/v1/people",
   "method": "POST",
   "headers": {
