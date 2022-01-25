@@ -1,6 +1,6 @@
 {
   "description": "A simple POST to the hello-world example",
-  "pathname": "v1/people",
+  "pathname": "/v1/people",
   "method": "POST",
   "headers": {
     "content-type": "application/json"
